@@ -1,0 +1,15 @@
+.view-content{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+  }
+  
+  @font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url(../fonts/ProximaNova-Reg-webfont.68396e4c.woff2);
+  }
+  
+  @font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url(../fonts/ProximaNova-Bold-webfont.678f8b76.woff2);
+  }

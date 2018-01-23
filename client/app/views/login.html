@@ -1,0 +1,34 @@
+<div class="login-bg">
+
+    <div id="login-wrapper--desktop">
+        <div class="">
+            <div class="col-xs-offset-3 col-sm-offset-2 col-xs-7 col-sm-10 col-md-offset-1 col-md-7 loginContent">
+                <h1>WALL STREET ENGLISH</h1>
+                <h1>QR LOGIN</h1><div><h5>Use Learn English app to scan the code and login into NSE</h5></div>
+                <div class="qr-wrapper">
+                    <qrcode version="2" error-correction-level="M" size="125" data="{{socketConnId}}"></qrcode>                    
+                </div>
+                
+                
+            </div>
+            <div class="col-xs-offset-2 col-sm-offset-2 col-xs-8 col-md-offset-0 col-sm-8 col-md-4 loginContainer" ng-class="signinCtrl.wrongCredentials">
+                <form class="form ng-pristine ng-valid" name="loginForm" ng-submit="login()">
+                    <div class="form-group login-grp">
+                        <input ng-focus="signinCtrl.removeAlerts()" type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="signinCtrl.userName" id="login-user-name" placeholder="Username"> 
+                        <input ng-focus="signinCtrl.removeAlerts()" type="password" class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="login-password" ng-model="signinCtrl.password" placeholder="Password"> 
+                        <button id="login-submit" type="submit" ng-disabled="signinCtrl.isLogging" class="btn btn-primary btn-block margin-small-vertical">LOGIN</button>                        
+                    </div>                                    
+                </form>
+                <p ng-show="errMsg"> Invalid credentials </p>
+                <a ng-if="!isOffline" nse-target-blank="" href="https://qualworld.wallstreetenglish.com.cn/bubble/account_reminder.jhtml">Forgot your password?</a>         
+            </div>                 
+        </div>
+
+    </div>
+
+    <div class="alert alert-info" ng-if="sessionExpired == true">
+        <center><strong> Your session has expired! Use 'Learn English' app on your phone to scan the code</strong></center>
+        <div class="glyphicon glyphicon-remove alert-close" ng-click="closeNotification();"></div>
+    </div>
+
+</div>
