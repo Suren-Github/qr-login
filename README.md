@@ -4,7 +4,7 @@ A demo on the QR based login for NSE and Learn English Application
 Steps to install and run the demo:
 ---------------------------------
 
-0. Assuming the user has installed and configured git, npm, bower, node, mongo, grunt
+0. Assuming the user has installed and configured bitbucket, npm, bower, node, mongo, grunt
 
 1. Set the target folder to mongo root directory and run the command 
   'mongod'
